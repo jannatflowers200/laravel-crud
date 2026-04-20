@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tasks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Task Manager</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>All Tasks</h1>
+            <a href="create.html" class="btn btn-primary">Add New Task</a>
+        </div>
+
+        <!-- Success Message (Hidden by default, show when needed) -->
+        <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Task created successfully!
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div> -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th width="5%">#</th>
+                        <th width="25%">Title</th>
+                        <th width="40%">Description</th>
+                        <th width="10%">Status</th>
+                        <th width="20%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Complete Laravel Tutorial</td>
+                        <td>Finish the CRUD tutorial for task management</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">Pending</span>
+                        </td>
+                        <td>
+                            <a href="edit.html" class="btn btn-sm btn-warning">Edit</a>
+                            <form action="#" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this task?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Learn Blade Templates</td>
+                        <td>Understand how to use Blade templating engine</td>
+                        <td>
+                            <span class="badge bg-success">Completed</span>
+                        </td>
+                        <td>
+                            <a href="edit.html" class="btn btn-sm btn-warning">Edit</a>
+                            <form action="#" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this task?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Database Migration</td>
+                        <td>N/A</td>
+                        <td>
+                            <span class="badge bg-success">Completed</span>
+                        </td>
+                        <td>
+                            <a href="edit.html" class="btn btn-sm btn-warning">Edit</a>
+                            <form action="#" method="POST" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this task?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Empty State (Show when no tasks) -->
+        <!-- <div class="alert alert-info">
+            No tasks found. <a href="create.html">Create your first task!</a>
+        </div> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
